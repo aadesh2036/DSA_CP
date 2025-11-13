@@ -51,7 +51,7 @@ void complexityAnalysisMenu() {
     cout << "║           ALGORITHM COMPLEXITY ANALYSIS                   ║\n";
     cout << "╚════════════════════════════════════════════════════════════╝\n";
     
-    cout << "\n📊 TIME COMPLEXITY COMPARISON:\n";
+    cout << "\n[TIME COMPLEXITY COMPARISON]\n";
     cout << "  ═══════════════════════════════════════════════════════════\n";
     cout << "  SORTING ALGORITHMS:\n";
     cout << "  • Bubble Sort:    O(n²) - Best: O(n), Worst: O(n²)\n";
@@ -75,7 +75,7 @@ void complexityAnalysisMenu() {
     cout << "  • DFS:            O(V + E)\n";
     cout << "  ═══════════════════════════════════════════════════════════\n";
     
-    cout << "\n📈 SPACE COMPLEXITY:\n";
+    cout << "\n[SPACE COMPLEXITY]\n";
     cout << "  • In-place algorithms: O(1) - Bubble, Selection, Insertion\n";
     cout << "  • Merge Sort: O(n) - Requires auxiliary space\n";
     cout << "  • Quick Sort: O(log n) - Recursive stack space\n";
@@ -84,6 +84,9 @@ void complexityAnalysisMenu() {
 }
 
 int main() {
+    // Initialize console for UTF-8 and ANSI colors
+    initConsole();
+    
     int choice;
     
     while(true) {
@@ -93,7 +96,7 @@ int main() {
         if(cin.fail()) {
             cin.clear();
             cin.ignore(10000, '\n');
-            cout << "\n❌ Invalid input! Please enter a number.\n";
+            cout << "\n[X] Invalid input! Please enter a number.\n";
             pauseScreen();
             continue;
         }
@@ -124,11 +127,11 @@ int main() {
                 complexityAnalysisMenu();
                 break;
             case 0:
-                cout << "\n✅ Thank you for using DSA Learning Tool!\n";
-                cout << "   Keep practicing and learning! 🚀\n\n";
+                cout << "\n[OK] Thank you for using DSA Learning Tool!\n";
+                cout << "   Keep practicing and learning!\n\n";
                 return 0;
             default:
-                cout << "\n❌ Invalid choice! Please select 0-8.\n";
+                cout << "\n[X] Invalid choice! Please select 0-8.\n";
                 pauseScreen();
         }
     }
